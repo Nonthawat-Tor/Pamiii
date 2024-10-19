@@ -1,0 +1,944 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Dancing Script", cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: "Roboto", sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Noto Serif", serif;
+}
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #00ffee;
+    --tor-color:rgb(255, 215, 222);
+    --light-pink: rgb(255, 241, 243);
+    --half-pink: rgb(255, 182, 194);
+    --strong-pink: rgb(255, 151, 169);
+    --mygreen-color: rgb(190, 255, 190);
+    --heart-color: #f20044;
+}
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* menu tab */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12% 4rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+.header p{
+    position: fixed;
+    top: 5px;
+    left: 8px;
+    font-size: 1.5rem;
+    text-decoration:  3px underline var(--main-color) ;
+}
+.logo {
+    font-size: 4rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+.logo span{
+    text-shadow: 0 0 25px var(--main-color);
+}
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+.navbar a:hover,
+.navbar a:active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+/* Card */
+
+section{
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+    box-shadow: 50px 0 50px 0 var(--half-pink);
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+}
+span{
+    color: var(--main-color);   
+}
+.logo span{
+    color: var(--main-color);
+}
+.card-content h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+.card-content h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.card-img {
+    border-radius: 50%;
+}
+.card-img img{
+    position: relative;
+    top: 3rem;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--tor-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.card-img img:hover{
+    box-shadow: 0 0 25px var(--light-pink),
+                0 0 50px var(--half-pink),
+                0 0 100px var(--strong-pink);
+}
+.card-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: black;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--main-color);
+}
+.btn-group{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.btn-group a:nth-of-type(2){
+    background-color: black;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 25px transparent;
+}
+.btn-group a:nth-of-type(2):hover{
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+    color: black;
+}
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.btn-group p{
+    border-bottom: 5px solid var(--half-pink);
+    border-radius: 20%;
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: "Web Developer";
+    color: var(--tor-color);
+    animation: words 20s infinite;
+}
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2PX solid var(--main-color);
+    }
+}
+@keyframes words{
+    0%,
+    20%{
+        content: " Chatchadaporn";
+    }
+    21%,
+    40%{
+        content: " Lakornphon ";
+    }
+    41%,
+    60%{
+        content: " Pamie";
+    }
+    61%,
+    80%{
+        content: "  Chat";
+    }
+    81%,
+    100%{
+        content: "  Rain Girl";
+    }
+}
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+
+
+
+/* wish well */
+
+
+.well {
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+.well span{
+    color: var(--half-pink);
+    text-shadow: 0 0 25px var(--light-pink);
+}
+.wish-words {
+    border: 1px var(--light-pink);
+    position: relative;
+    top: 15px;
+    background-color: white;
+    color: black;
+    border: 40px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 25px var(--half-pink);
+    
+}
+.wish-words p{
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    border-spacing: 1rem;
+    text-align: center;
+    position: relative;
+    line-height: 5rem;
+    word-spacing: 5px;
+}
+.wish-well {
+    border-bottom: 10px solid var(--main-color);
+    box-shadow:0 0 50px var(--main-color);
+
+}
+@keyframes heart{
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(1.08);
+    }
+}
+.heart{
+    width: 50px;
+    height: 50px;
+    background: var(--heart-color);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    left: 50%;
+    top: 150px;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px var(--heart-color);
+    animation: heart 0.6s linear infinite;
+}
+.heart::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--heart-color);
+    border-radius: 50px;
+    top: -23px;
+    box-shadow: -10px -10px 90px var(--heart-color);
+}
+.heart::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--heart-color);
+    border-radius: 50px;
+    right: -23px;
+    box-shadow: 10px 10px 90px var(--heart-color);
+}
+
+/* cake */
+
+.cake {
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+    
+}
+.bgc-img {
+    min-height: 80vh;
+    padding: 10rem 12% 10rem;
+    background-image: url("img/radiant-birthday-decorations-background-with-gentle-birthday-background-celebration-theme_1020697-729037.jp");
+    background-size: cover;
+    background-color: white;
+    border: 10px solid pink;
+    box-shadow: 0 0px 30px var(--light-pink);
+}
+.hair1 {
+    width: 140px;
+    height: 70px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    position: relative;
+    background-color: var(--bg-color);
+    top: 70px;
+    left: 95px;
+}
+.hair2 {
+    width: 140px;
+    height: 180px;
+    background-color: var(--bg-color);
+    position: relative;
+    border-radius: 0 0 60px 60px;
+    top: 50px;
+}
+.face {
+    background-color: rgb(255, 229, 195);
+    height: 90px;
+    width: 110px;
+    position: relative;
+    left: 15px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+.eye-left {
+    background-color: aliceblue;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: relative;
+    top: 16px;
+    left: 9px;
+}
+.eye-right {
+    background-color: aliceblue;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 14px;
+    left: 70px;
+}
+.eyeball1, .eyeball2 {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    border-radius: 50%;
+    top: 4px;
+    left: 4.5px;
+}
+.girl:hover, .eyeball1{
+    animation: 4s see1;
+}
+
+@keyframes see1{
+    50%{
+        top: 8.5px;
+        left: 6.5px;
+    }
+}
+
+.girl:hover, .eyeball2{
+    animation: 4s see2;
+}
+
+@keyframes see2{
+    50%{
+        top: 8px;
+        left: 2px;
+    }
+}
+
+.dot1, .dot3{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    top: 4px;
+}
+.dot1 {
+    left: 2px;
+}
+.dot3 {
+    left: 10px;
+}
+.dot2, .dot4{
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    top: 4px;
+    border-radius: 50%;
+}
+.dot2 {
+    left: 14px;
+}
+.dot4 {
+    left: 5px;
+}
+.giff {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(209, 69, 143);
+    top: 38px;
+    border-top-left-radius: 10px;
+
+     .eye-kit1, .eye-kit2{
+        position: relative;
+        width: 5px;
+        height: 5px;
+        background-color: rgb(209, 69, 143);
+     }
+
+     .eye-kit1{
+        position: relative;
+        top: 10px;
+        left: 2px;
+        z-index: 10;
+     }
+     .eye-kit2{
+        position: relative;
+        top: 5px;
+        left: 3px;
+        z-index: 10;
+     }
+}
+
+.hairband {
+    background-color: rgb(0, 0, 0);
+    height: 55px;
+    width: 110px;
+    bottom: 143px;
+    left: 14.5px;
+    position: relative;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+}
+.hairband1 {
+    background-color: rgb(0, 0, 0);
+    height: 56px;
+    width: 112px;
+    bottom: 143px;
+    left: 14.5px;
+    position: relative;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    left: -0.5px;
+    top: 7px;
+
+    .emp-hair{
+        position: relative;
+        width: 25px;
+        height: 50px;
+        background-color: #ffecb3;
+        top: 6px;
+        left: 55px;
+        border-top-left-radius:43px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        .nonemp-hair{
+            position: relative;
+            background-color: black;
+            height: 50px;
+            width: 10px;
+            top: -1px;
+            left: 2px;
+            border-bottom-left-radius: 10px;
+        }
+    }
+}
+.mouth {
+    background-color: #ffbecc;
+    height: 25px;
+    width: 50px;
+    left: 29px;
+    bottom: 5px;
+    position: relative;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+.girl:hover, .mouth{
+    animation: blow 4s ease-in-out infinite;
+}
+
+@keyframes blow{
+    50%{
+        height: 20px;
+        width: 20px;
+        left: 43px;
+        border-radius: 50%;
+    }
+}
+
+.dress {
+    background-color: rgb(167, 219, 167);
+    height: 130px;
+    width: 120px;
+    position: relative;
+    border-radius: 35px 35px 0 0;
+    top: 18px;
+    right: 6px;
+
+}
+.neck {
+    background-color: #ffecb3;
+    position: relative;
+    height: 40px;
+    width: 30px;
+    left: 40px;
+    bottom: 130px;
+    border-radius: 0 0 15px 15px;
+
+    .pog{
+        position: relative;
+        bottom: -27px;
+        left: 0;
+        width: 30px;
+        height: 13px;
+        background-color: white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+.ear-left, .ear-right {
+    background-color: #ffecb3;
+    position: relative;
+    height: 10px;
+    width: 20px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+}
+.ear-left {
+    transform: rotate(-90deg);
+    right: 5px;
+    bottom: 118px;
+}
+.ear-right {
+    transform: rotate(90deg);
+    left: 124px;
+    bottom: 127px;
+}
+.cake-back {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 180px;
+    margin-top: 323px;
+    margin-left: -130px;
+}
+.plate {
+    height: 110px;
+    width: 250px;
+    position: relative;
+    bottom: -10px;
+    left: -10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    box-shadow: 0 2px 0 #ccc,
+                0 4px 0 #ccc,
+                0 5px 40px black;
+}
+.cake-back > *{
+    position: relative;
+}
+.layer {
+    position: relative;
+    display: block;
+    height: 100px;
+    width: 230px;
+    border-radius: 50%;
+    background-color: #553c13;
+    box-shadow: 0 2px 0 #503913,
+                0 4px 0 #553c13,
+                0 6px 0 #553c13,
+                0 8px 0 #4b3512,
+                0 10px 0 #4b340f,
+                0 12px 0 #503b16,
+                0 14px 0 #503914,
+                0 16px 0 #553c13,
+                0 18px 0 #553c13,
+                0 20px 0 #553c13,
+                0 22px 0 #553c13,
+                0 24px 0 #553c13,
+                0 26px 0 #553c13,
+                0 28px 0 #553c13,
+                0 30px 0 #553c13;
+}
+.layer-top {
+    top: -196px;
+}
+.layer-mid {
+    top: -266px;
+}
+.layer-bot {
+    top: -336px;
+}
+.icing {
+    top: -495px;
+    left: 5px;
+    background-color: #f0e4d0;
+    height: 90px;
+    width: 220px;
+    border-radius: 50%;
+}
+.icing::before {
+    content: '';
+    position: relative;
+    top: 4px;
+    right: 5px;
+    bottom: 6px;
+    left: 5px;
+    background-color: #f0e4d0;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 4px #f0e4d0
+                0 0 4px #f3ead9
+                0 0 4px #f3ead9;
+}
+.drip {
+    display: block;
+    height: 60px;
+    width: 50px;
+    background-color: #f0e4d0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.drip1 {
+    top: -534px;
+    left: 5px;
+    transform: skewY(15deg);
+    height: 48px;
+    width: 40px;
+}
+.drip2 {
+    top: -590px;
+    left: 185px;
+    transform: skewY(15deg);
+    height: 48px;
+    width: 40px;
+}
+.drip3 {
+    top: -622px;
+    left: 70px;;
+    width: 70px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.candle {
+    background-color: #7b020b;
+    height: 50px;
+    width: 16px;
+    border-radius: 8px / 4px;
+    top: -760px;
+    left: 58%;
+    margin-left: -8px;
+    z-index: 10;
+}
+.candle::before{
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 8px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #79080f;
+}
+.flame {
+    position: relative;
+    background-color: orange;
+    height: 35px;
+    width: 15px;
+    border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+    top: -34px;
+    left: 50%;
+    margin-left: -7.5px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(orange 0.5)
+                0 0 20px rgba(orange 0.5)
+                0 0 60px rgba(orange 0.5)
+                0 0 80px rgba(orange 0.5);
+    transform-origin: 50% 90%;
+    animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker{
+    0%{
+        transform: skewX(5deg);
+        box-shadow: 0 0 10px rgba(orange 0.2)
+                    0 0 20px rgba(orange 0.2)
+                    0 0 60px rgba(orange 0.2)
+                    0 0 80px rgba(orange 0.2);
+    }
+    25%{
+        transform: skewX(-5deg);
+        box-shadow: 0 0 10px rgba(orange 0.5)
+                    0 0 20px rgba(orange 0.5)
+                    0 0 60px rgba(orange 0.5)
+                    0 0 80px rgba(orange 0.5)
+    }
+    50%{
+        transform: skewX(10deg);
+        box-shadow: 0 0 10px rgba(orange 0.3)
+                    0 0 20px rgba(orange 0.3)
+                    0 0 60px rgba(orange 0.3)
+                    0 0 80px rgba(orange 0.3)
+    }
+    75%{
+        transform: skewX(-10deg);
+        box-shadow: 0 0 10px rgba(orange 0.4)
+                    0 0 20px rgba(orange 0.4)
+                    0 0 60px rgba(orange 0.4)
+                    0 0 80px rgba(orange 0.4)
+    }
+    100%{
+        transform: skewX(5deg);
+        box-shadow: 0 0 10px rgba(orange 0.5)
+                    0 0 20px rgba(orange 0.5)
+                    0 0 60px rgba(orange 0.5)
+                    0 0 80px rgba(orange 0.5)
+    }
+}
+
+.girl:hover, .flame {
+    animation: vanish 4s forwards ease-in-out infinite;
+}
+
+@keyframes vanish{
+    100%{
+        background: none;
+    }
+}
+.song-cake {
+    font-family: "Poppins", sans-serif;
+    width: 35%;
+    height: 55vh;
+    position: absolute;
+    right: 15%;
+    background: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+.music-player {
+    background: var(--mygreen-color);
+    width: 260px;
+    padding: 25px 35px;
+    text-align: center;
+    border-radius: 30px;
+}
+.nav-music {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    top: -7px;
+    position: relative;
+
+    .circle-music{
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        background: #fff;
+        color: #0b4825;
+        box-shadow: 0 5px 10px rgb(23, 78, 23);
+    }
+}
+.song-img {
+    height: 135px;
+    width: 135px;
+    border-radius: 25%;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 60px rgb(15, 73, 15);
+    margin-top: 25px;
+    background-size: cover;
+    background-color: var(--bg-color);
+}
+#progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 5px 5px green;
+}
+.controls-music {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls-music div{
+    width: 30px;
+    height: 25px;
+    margin: 20px;
+    background: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: black;
+    box-shadow: 0 10px 20px rgb(11, 56, 11);
+    cursor: pointer;
+}
+.controls-music div:nth-child(2){
+    transform: scale(1.5);
+    background: rgb(9, 64, 9);
+    color: white;
+}
+
+/* about Dev */
+
+.dev{
+    box-shadow: 0 0 35px var(--light-pink);
+}
+.head-dev {
+    font-size: 6rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 45px;
+    color: var(--light-pink);
+
+    span{
+        text-shadow: 0 0 25px var(--main-color);
+    }
+}
+.dev-icon {
+    font-size: 55px;
+    position: relative;
+    top: 120px;
+    text-align: center;
+    color: var(--heart-color);
+
+    #facebook{
+        color: blue;
+    }
+
+    p{
+        text-align: center;
+        color: var(--half-pink);
+        font-weight: 600;
+        transition: 0.3s ease;
+        border-bottom: transparent;
+    }
+}
+.last-line {
+    position: relative;
+    font-size: 35px;
+    bottom: -360px;
+    color: var(--half-pink);
+    text-shadow: 0 0 25px var(--light-pink);
+}
